@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background-color: #000300;
+}
+
+@layer base{
+  h2{
+    @apply md:text-4xl sm:text-3xl text-xl font-bold py-2;
+  }
+  button{
+    @apply bg-[#00df9a] w-[150px] rounded-md mx-auto py-3 my-6 text-black 
+    font-semibold hover:text-white hover:bg-[#00df9a]/80 duration-700;
+  }
+}
+
+@layer components{
+  .card{
+    @apply bg-gray-100 scale-105;
+  }
+  .card .card__button{
+    @apply bg-black text-white;
+  }
+
+  .card-hover:hover .card__button{
+    @apply shadow-2xl bg-black text-white;
+  }
+
+  /* Animation on Startup */
+  .element {
+    animation: pulse 3s 1;
+  }
+  @keyframes pulse {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+
